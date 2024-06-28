@@ -11,8 +11,8 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: "1.16"
-      - name: Run go setup env
-        run: go env -w GO111MODULE=off
+      # - name: Run go setup env
+      #   run: go env -w GO111MODULE=off
       - name: Run go test and coverage
         run: go test -coverprofile=coverage.out
       - name: SonarCloud Scan
