@@ -15,8 +15,9 @@ jobs:
           go-version: "1.15"
       - name: Run go test and coverage
         run: go test -coverprofile=coverage.out
-      - name: Display coverage file content
-        run: cat coverage.out
+      - name: List files in workspace
+        run: ls -la /github/workspace
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
