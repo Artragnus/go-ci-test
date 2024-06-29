@@ -1,9 +1,9 @@
-FROM golang:1.16
+FROM golang:1.15
 
 WORKDIR /app
 
 COPY . .
 
-RUN go env -w GO111MODULE=off && go build -o math
+RUN go build -o math
 
 CMD ["./math"]
